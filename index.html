@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMAND PAGE</title>
+    <style>
+        header{
+            display: flex;
+            align-items: center;
+            padding: 30px 70px;
+            background-color: whitesmoke;
+            margin: 20px 100px;
+            box-shadow: 2px 5px 5px rgb(121, 124, 109); 
+            border-radius: 8px; 
+        }
+
+        .titulo{
+            color: black;
+            margin-left: 110px;
+            font-size: 30px;
+        }
+
+        body{
+            background:rgba(0, 0, 0, 0.94);
+        }
+
+        .navegacion{
+            max-width: 100%;
+            
+            background-color: white;
+
+        }
+
+        ul{
+            display: flex;
+            padding: 10px 15px;
+        }
+
+        li {
+            margin-right: 28%; 
+            font-family:'Times New Roman', Times, serif;
+            font-style: normal;
+            color: black;
+            font-size: 20px;
+        }
+
+        li:hover{
+            background-color: rgb(22, 22, 39);
+            font-size: 30px;
+            color: #fff; 
+        }
+        .contenido{
+            color: rgba(255, 255, 255, 0.925);
+            margin: 60px 350px 20px 300px;
+            font-size: 18px;
+            padding: 5px 35px;
+            background-color: black;
+        }
+
+        .imagenes{
+            width: 600px;
+            border-color: white;
+            border-radius: 8px;
+            box-shadow: 2px 5px 5px rgb(121, 124, 109); 
+
+        }
+
+        b{
+            color:rgb(44, 44, 255);
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" width="220" alt="Logo de la página">
+        </div>
+        <div class="titulo">
+            <h1>COMMAND PAGE</h1>
+        </div>
+    </header>
+    
+    <nav class="navegacion">
+        <ul>
+            <li>inicio</li>
+            <li>desarrollo</li>
+            <li>yajua</li>
+            <li>Fin</li>
+        </ul>
+
+    </nav>
+
+
+    <article class="contenido">
+        <h1>Gestion de archivos y directorios en la terminal de Ubuntu</h1>
+            <h3>Crear un directorio</h3>
+            <p>Usamos el comando <b>pwd</b> para saber en donde nos encontramos. Ya sabiendo que estamos en el  subdirectorio de home (en este caso nuestro usuario “ubuntu-server”) usamos el comando <b>ls</b>,   para listar o ver los directorios dentro de Ubuntu-server.</p>
+            <p>Ahora usamos el comando <b>mkdir actividad</b> para crear un directorio nuevo con el nombre  “actividad”, volvemos a ejecutar <b>ls</b>, y vemos que se a agregado un nuevo directorio llamado “actividad”:</p>
+            <img class="imagenes" src="mkdir.png" alt="mkdir">
+
+            <h3>Movernos al directorio creado</h3>
+            <p>Usamos el comando <b>cd</b> para ir al directorio recien creado, en este caso 
+                “actividad”:</p>
+            <img class="imagenes" src="cd.png" alt="cd">
+
+            <h3>Crear un archivo vacio</h3>
+            <p>Usamos el comando <b>touch archivo.txt</b> para crear un archivo vacio, (como no 
+                salimos del directorio actividad, se crea dentro de este). Usamos el comando <b>ls</b> 
+                para ver los que contiene el directori actividad y vemos que esta el archivo que 
+                creamos anteriormente (archivo.txt):</p>
+            <img class="imagenes" src="touch.png" alt="touch">
+
+            <h3>Copiar un archivo</h3>
+            <p>Usamos el comando <b>cp archivo.txt copia_archivo.txt</b> para hacer una copia del 
+                archivo “archivo.txt” con el nombre de “copia_archivo.txt”. luego usamos el 
+                comando <b>ls</b> para listar y ver que tenemos un nuevo archivo (copia_archivo.txt), el 
+                cual es la copia que hicimos anteriormente:</p>
+            <img class="imagenes" src="cp.png" alt="cp">
+
+            <h3>cambiar nombre de archivo</h3>
+            <p>Usamos el comando <b>mv copia_archivo.txt renombrado_archivo.txt</b> para 
+                cambiar de nombre el archivo “copia_archivo.txt” a “renombrado_archivo.txt”. 
+                usamos el comando <b>ls</b> para comprobar que se haya cambiado el nombre del 
+                archivo:</p>
+            <img class="imagenes" src="mv.png" alt="mv">
+            
+            <h3>eliminar archivo</h3>
+            <p>Usamos el comando <b>rm renombrado_archivo.txt</b> para eliminar el archivo 
+                “renombrado_archivo.txt”. usamos el comando <b>ls</b> para ver si se eliminó, y en 
+                efecto ya no lo aparece:</p>
+            <img class="imagenes" src="rmrenombrado.png" alt="rm archivo">
+
+            <h3>Eliminar directorios</h3>
+            
+            <p><i>(usamos el comando <b>clear</b> para limpiar la pantalla o borrar las líneas de comando).</i></p>
+                
+            <p>Usamos el comando <b>pwd</b> para ver en que directorio nos encontramos. Estamos 
+                en el directorio “actividad”, luego usamos el comando <b>cd ~</b> para regresar al 
+                directorio “home”, volvemos a usar <b>pwd</b> para comprobar que estamos en “home”. 
+                Procedemos a listar home con <b>ls</b>, vemos 3 directorios, entre esos “actividad” el 
+                cual procederemos a eliminar usando el comando <b>rm -r actividad</b>. Volvemos a 
+                listar con el comando <b>ls</b> y comprobamos que solo quedan 2 directorios:
+            </p>
+            <img class="imagenes" src="rmactividad.png" alt="rm directorio">
+
+    </article>
+</body>
+</html>
